@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.DetailActivity">
+
+    <include layout="@layout/content_detail"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ab_detail"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/header_thubmnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <RatingBar
+                    android:id="@+id/rb_votes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="-52dp"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@android:color/holo_orange_dark"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:secondaryProgressTint="@android:color/holo_orange_dark"
+                    android:stepSize="0.1"
+                    android:textColor="@android:color/darker_gray"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp" />
+
+                <TextView
+                    android:id="@+id/votes_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="130dp"
+                    android:layout_marginRight="148dp"
+                    android:textSize="15sp"/>
+
+
+                <TextView
+                    android:id="@+id/votes_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:id="@+id/release_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:padding="10dp"
+                    android:textColor="#fff"/>
+
+                <!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_marginRight="10dp">-->
+
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="20dp"-->
+<!--                        android:layout_marginRight="20dp"-->
+<!--                        android:layout_weight="1">-->
+<!--                    </RelativeLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/ab_detail"
+        app:layout_anchorGravity="center"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
